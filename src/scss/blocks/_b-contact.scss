@@ -1,6 +1,6 @@
 .b-contact{
   padding: 0 3rem;
-  padding-top: 5.2rem;
+  padding-top: 7.4rem;
   text-align: center;
   @include breakpoint(overPhone){
     padding: 0 5rem;
@@ -69,21 +69,19 @@
     position: relative;
     padding: 0 5rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3.3rem;
     line-height: 4.5rem;
+    width: 86%;
     @include breakpoint(overPhone){
       padding: 0 10rem;
       margin-top: 4.3rem;
       line-height: 4.5rem;
+      width: auto;
     }
 
     & .text{
-      display: none;
       @include font-size(15,15);
       font-family: $ff-main-medium;
-      @include breakpoint(overPhone){
-        display: inline-block;
-      }
     }
   }
 }
