@@ -1,0 +1,93 @@
+.b-newsletter{
+  padding-top: 5.2rem;
+  padding-bottom: 6.8rem;
+  border-bottom: 1px solid $color-gray-mid;
+  text-align: center;
+  background: $color-gray;
+  @include breakpoint(overPhone){
+    padding-top: 6.2rem;
+    padding-bottom: 8rem;
+  }
+
+  &__inner{
+      padding: 0 3rem;
+      @include breakpoint(overPhone){
+        padding: 0;
+      }
+  }
+
+  &__title{
+    @include font-size(24,24);
+    @include letter-spacing(0);
+    color:$color-black;
+    font-family: $ff-main-regular;
+    @include breakpoint(overPhone){
+      font-family: $ff-main-bold;
+    }
+  }
+
+  &__text{
+    @include font-size(14,17);
+    @include letter-spacing(25);
+    @include line-height(22, 22);
+    color:$color-gray-title;
+    font-family: $ff-main-medium;
+    margin-top: 1.5rem;
+    @include breakpoint(overPhone){
+      @include letter-spacing(5);
+      margin-top: 0.9rem;
+    }
+  }
+
+  &__form{
+    font-family: $ff-main-thin;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3.9rem;
+    @include breakpoint(overPhone){
+      margin-top: 3.6rem;
+      width: 64rem;
+    }
+    & input{
+      outline:0;
+      border: 1px solid $color-gray-txt;
+      padding: 1.9rem 2rem;
+      padding-right: 8rem;
+      width: 100%;
+      @include breakpoint(overPhone){
+        padding-right: 20rem;
+      }
+      &::placeholder{
+        font-size: 1.6rem;
+      }
+    }
+
+    & .c-btn--newsletter{
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0 2.7rem;
+      @include breakpoint(overPhone){
+        padding: 0 6rem;
+      }
+
+      & .text{
+        display: none;
+        @include font-size(14,14);
+        @include breakpoint(overPhone){
+          display: inline-block;
+          text-transform: uppercase;
+        }
+      }
+
+      & .icon{
+        display: inline-block;
+        @include breakpoint(overPhone){
+          display: none;
+        }
+      }
+    }
+  }
+}

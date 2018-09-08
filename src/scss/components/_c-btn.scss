@@ -85,6 +85,7 @@
     text-align: center;
     display: inline-block;
     font-family: $ff-main-medium;
+
     .icon{
       @include font-size(12,14);
       display: inline-block;
@@ -93,6 +94,9 @@
     }
 
     &:hover{
+      @include breakpoint(overPhone){
+        cursor: pointer;
+      }
       .icon{
         transform: translateX(10px);
       }
@@ -103,6 +107,7 @@
     @include letter-spacing(0);
     color: $color-red;
     font-family: $ff-main-medium;
+
     .icon{
       @include font-size(12,14);
       display: inline-block;
@@ -111,9 +116,43 @@
     }
 
     &:hover{
+      @include breakpoint(overPhone){
+        cursor: pointer;
+      }
       .icon{
         transform: translateX(10px);
       }
     }
   }
+
+  &--newsletter{
+    background-color: $color-red;
+    color: $color-white;
+    border-radius: 0;
+    transition: all 0.35s ease;
+    border: 1px solid transparent;
+    &:hover{
+      @include breakpoint(overPhone){
+        cursor: pointer;
+        background-color: $color-white;
+        color: $color-gray-2;
+        border: 1px solid $color-red;
+      }
+    }
+  }
+  &--contact{
+    background-color: $color-white;
+    color: $color-gray-2;
+    border: 1px solid $color-red;
+    border-radius: 0;
+    transition: all 0.35s ease;
+    &:hover{
+      @include breakpoint(overPhone){
+        cursor: pointer;
+        background-color: $color-red;
+        color: $color-white;
+        border: 1px solid transparent;
+      }
+    }
+ }
 }

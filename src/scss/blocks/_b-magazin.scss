@@ -1,0 +1,99 @@
+.b-magazin{
+  padding-top: 6.9rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-gray-mid;
+  @include breakpoint(overPhone){
+    padding-top: 6.6rem;
+    padding-bottom: 6rem;
+  }
+  &__inner{
+    padding: 0 3rem;
+    @include breakpoint(overPhone){
+      padding-left: 12rem;
+      padding-right: 18rem;
+    }
+  }
+  &__title{
+    @include font-size(18,24);
+    @include letter-spacing(0);
+    font-family: $ff-main-bold;
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 4.8rem;
+    @include breakpoint(overPhone){
+      color:$color-black-mid;
+      font-family: $ff-main-medium;
+      margin-bottom: 6rem;
+    }
+  }
+  &__content{
+    @include breakpoint(overPhone){
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__mo{
+    width: 100%;
+    margin-bottom: 3.4rem;
+    @include breakpoint(overPhone){
+      width: 30.4%;
+      margin-bottom: 0;
+    }
+    &__media{
+      @include breakpoint(overPhone){
+
+      }
+      &__title{
+        @include font-size(12,13);
+        @include letter-spacing(100);
+        color:$color-gray-title;
+        font-family: $ff-main-bold;
+        text-transform: uppercase;
+        margin-bottom: 1.7rem;
+        @include breakpoint(overPhone){
+          margin-bottom: 1.4rem;
+        }
+      }
+    }
+
+    &__body{
+      padding-right: 3rem;
+      @include breakpoint(overPhone){
+        padding-right: 3rem;
+      }
+      &__title{
+        @include font-size(17,19);
+        @include letter-spacing(0);
+        @include line-height(25, 23);
+        color:$color-black;
+        font-family: $ff-main-bold;
+        margin-top: 1.6rem;
+        @include breakpoint(overPhone){
+          margin-top: 1.6rem;
+        }
+      }
+      &__text{
+        @include font-size(14,14);
+        @include letter-spacing(25);
+        @include line-height(22, 22);
+        color:$color-gray-title;
+        display: none;
+        @include breakpoint(overPhone){
+          margin-top: 0.9rem;
+          display:block;
+        }
+      }
+      & .c-btn--more-small{
+        display: none;
+        @include breakpoint(overPhone){
+          margin-top: 1.8rem;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}
