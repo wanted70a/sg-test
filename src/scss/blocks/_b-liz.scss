@@ -1,0 +1,109 @@
+.b-liz{
+  padding-top: 6.8rem;
+  padding-bottom: 12.3rem;
+  border-bottom: 1px solid $color-gray-mid;
+  @include breakpoint(overPhone){
+    border-bottom: 4px solid $color-gray-mid;
+    padding-bottom: 11rem;
+    padding-top: 20rem;
+  }
+  &__inner{
+    padding-left: 0;
+    padding-top: 0;
+    position: relative;
+    @include breakpoint(overPhone){
+      padding-left: 9.1rem;
+      padding-top: 6.2rem;
+    }
+
+    & .c-reveal--red{
+      left: auto;
+      bottom: auto;
+      height: 22.5rem;
+      width: 35.2rem;
+      top: 11.6rem;
+      @include breakpoint(overPhone){
+        left: auto;
+        bottom: auto;
+        height: 37.4rem;
+        width: 86.3rem;
+        top: 0;
+      }
+    }
+  }
+
+  &__content{
+    @include breakpoint(overPhone){
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__intro{;
+    padding-right: 0;
+    padding-left: 3rem;
+    @include breakpoint(overPhone){
+        width: 24.5%;
+        padding-left: 0;
+        padding-right: 4rem;
+    }
+    & .title{
+      margin-top: 3rem;
+      color:$color-black;
+      @include font-size(33,42);
+      @include line-height(33,48);
+      @include letter-spacing(0);
+      font-family:$ff-main-light;
+      @include breakpoint(overPhone){
+        margin-top: 12.2rem;
+      }
+    }
+
+    & .text{
+      color:$color-gray-2;
+      @include font-size(14,18);
+      @include line-height(22, 24);
+      @include letter-spacing(0);
+      margin-top:1.4rem;
+      @include breakpoint(overPhone){
+        margin-top:1.9rem;
+      }
+    }
+  }
+
+  &__media{
+    width: 92.8%;
+    margin-top: 9.5rem;
+    @include breakpoint(overPhone){
+      margin-top: 0;
+      width: 71%;
+    }
+    &__img{
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__description{
+      color:$color-gray-title;
+      @include font-size(14,18);
+      @include line-height(22, 28);
+      padding-left: 3rem;
+      margin-top: 3.3rem;
+      max-width: 33.2rem;
+      @include breakpoint(overPhone){
+        margin-top: 5.2rem;
+        padding-left: 0;
+        max-width: 77rem;
+      }
+    }
+    & .c-btn--more{
+      margin-top: 2rem;
+      padding-left: 3rem;
+      @include breakpoint(overPhone){
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

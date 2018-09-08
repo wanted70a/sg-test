@@ -1,0 +1,195 @@
+.b-header{
+  //background: rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  &__inner{
+    margin: 0 auto;
+    max-width: 1440px;
+    width:100%;
+  }
+
+  &__top{
+    background: $color-white;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $ff-main-light;
+    @include font-size(13, 13);
+    height: 3.7rem;
+    padding-left: 1.6rem;
+    @include breakpoint(overPhone){
+        height: 4.7rem;
+        padding-left: 6rem;
+        padding-right: 3rem;
+    }
+
+    &__links{
+      &-grp1{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 17.2rem;
+        margin-right:0;
+        @include breakpoint(overPhone){
+          width: 17.2rem;
+          margin-right: 18.3rem;
+        }
+      }
+      &-grp2{
+        margin-right: 37.8rem;
+        .b-header__top__link{
+          margin-right: 3rem;
+
+          &--last{
+            margin-right: 0;
+          }
+
+          &:nth-child(2){
+            margin-right: 10rem;
+          }
+        }
+      }
+    }
+    &__link{
+      display: inline-block;
+      color: $color-gray-title;
+      text-transform: uppercase;
+      line-height: 3.7rem;
+      transition: color 0.3s ease;
+      @include breakpoint(overPhone){
+        line-height: 4.7rem;
+      }
+
+      & .icon{
+        display: inline-block;
+        &:before{
+          color: $color-gray-txt;
+          transition: color 0.3s ease;
+        }
+      }
+
+      & .icon-key{
+        font-size: 2rem;
+        transform: rotate(45deg);
+        position: relative;
+        top: 0.5rem;
+      }
+
+      & .link-text{
+        margin-left: 0.7rem;
+      }
+
+      &--last{
+        margin-right: 0;
+      }
+
+      &--active{
+        color: $color-red;
+      }
+
+      &:hover{
+        color: $color-red;
+        cursor: pointer;
+        & .icon{
+          &:before{
+            color: $color-red;
+          }
+        }
+      }
+
+    }
+
+    &__lang{
+      &__separator{
+        padding-left: 0.4rem;
+        padding-right: 0.6rem;
+        color: $color-gray-title;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__nav-desk{
+      @include breakpoint(overPhone){
+        padding-top: 3.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+      }
+      &__content{
+        flex:1;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: baseline;
+      }
+      &__logo{
+        width: 15rem;
+        margin-right: 20.3rem;
+      }
+      &__links{
+        font-family: $ff-main-medium;
+        font-size: 1.6rem;
+      }
+      &__link{
+        color: $color-white;
+        transition: color 0.3s ease;
+        margin-right: 2.9rem;
+        &:hover{
+          color: $color-red;
+        }
+      }
+      &.white{
+        background: $color-white;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+  }
+  &__nav-mob{
+    @include breakpoint(overPhone){
+      display: none;
+    }
+    position: relative;
+    &__menu{
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding-top: 2rem;
+      display: flex;
+      flex-flow: column nowrap;
+      color: $color-white;
+      background-image: linear-gradient($color-black-mid, $color-gray-title);
+      height: 66.4rem;
+      &__soc{
+
+      }
+      &__links{
+        font-family: $ff-main-medium;
+        font-size: 1.6rem;
+      }
+      &__lang{
+
+      }
+    }
+    &__content{
+      padding: 0 1.6rem;
+      padding-top: 2.2rem;
+    }
+    &__logo{
+      width: 15rem;
+    }
+    &__burger{
+
+    }
+    &__link{
+      color: $color-white;
+      transition: color 0.3s ease;
+      margin-right: 2.9rem;
+      display: block;
+    }
+  }
+}

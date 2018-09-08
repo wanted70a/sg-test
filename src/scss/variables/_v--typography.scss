@@ -1,0 +1,93 @@
+//----- Variables / Typography
+
+//------FONT-FACE
+$font-path: "../font";
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('#{$font-path}/HelveticaNeu/HelveticaNeue.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Bold';
+	src: url('#{$font-path}/HelveticaNeuBold/HelveticaNeue-Bold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Italic';
+	src: url('#{$font-path}/HelveticaNeuItalic/HelveticaNeue-Italic.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Medium';
+	src: url('#{$font-path}/HelveticaNeuMedium/HelveticaNeue-Medium.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Light';
+	src: url('#{$font-path}/HelveticaNeuLight/HelveticaNeue-Light.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Thin';
+	src: url('#{$font-path}/HelveticaNeuThin/HelveticaNeue-Thin.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//------FONT FAMILY VARIBALE
+$fontDefault              : Arial, sans-serif;
+
+// Examples
+// $ff == $font-family
+$ff-main-regular          : 'HelveticaNeue';
+$ff-main-medium           : 'HelveticaNeue-Medium';
+$ff-main-bold             : 'HelveticaNeue-Bold';
+$ff-main-italic           : 'HelveticaNeue-Italic';
+$ff-main-light            : 'HelveticaNeue-Light';
+$ff-main-thin             : 'HelveticaNeue-Thin';
+
+//----- Font size
+$font-size-base           : 10;
+
+//------GLOBAL FONT SETTINGS
+html {
+  @include font-size-vw($font-size-base, $font-size-base);
+}
+body {
+    font-family: $ff-main-regular;
+    -webkit-font-smoothing: antialiased;
+		height: 6500px;
+}
+
+html, body {
+	&.fixed {
+		overflow: hidden;
+		max-height: 100%;
+	}
+}
+
+h1 {}
+
+
+.bold{
+	font-family: $ff-main-bold;
+}
+
+.italic{
+	font-family: $ff-main-italic;
+}
+
+.light{
+	font-family: $ff-main-light;
+}
+
+a {
+    text-decoration: none;
+}
+p {}

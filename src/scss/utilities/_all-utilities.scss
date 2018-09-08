@@ -1,0 +1,19 @@
+.u-only-mob {
+    display: block;
+
+    @include breakpoint(overPhone) {
+        display: none;
+    }
+}
+
+.u-only-desk {
+    display: none;
+
+    @include breakpoint(overPhone) {
+        display: block;
+    }
+}
+
+.u-none{
+    display: none;
+}

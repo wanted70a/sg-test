@@ -1,0 +1,119 @@
+.c-btn{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: $color-red;
+  background: $color-white;
+  outline:0;
+  backface-visibility: hidden;
+  border: none;
+  border-radius: 4rem;
+  padding-left: 3.4rem;
+  padding-right: 5.4rem;
+  @include line-height(50,50);
+  @include font-size(15,15);
+  @include letter-spacing(-50);
+  font-family: $ff-main-medium;
+  @include breakpoint(overPhone){
+    padding-left: 3.4rem;
+    padding-right: 6rem;
+    cursor: pointer;
+    @include letter-spacing(-20);
+  }
+
+  &--animation{
+    &:hover{
+      & .icon{
+        @include breakpoint(overPhone){
+          right: 2.2rem;
+        }
+      }
+    }
+
+    & .icon{
+      position: absolute;
+      @include absolute(center-vertical);
+      @include font-size(11,11);
+      right: 3.2rem;
+      transition: right 0.35s ease;
+      @include breakpoint(overPhone){
+        right: 3.2rem;
+      }
+    }
+  }
+
+  &--round{
+    border-radius: 5rem;
+  }
+
+  &--next{
+    border-radius: 100%;
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 0;
+    bottom: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    @include breakpoint(overPhone){
+      bottom: 7.7rem;
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+    & .icon{
+      &:before{
+        display: block;
+        transform: rotate(90deg);
+        transition: all 0.35s ease;
+      }
+    }
+    &:hover{
+      & .icon{
+        &:before{
+          @include breakpoint(overPhone){
+            transform: translateY(5px) rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--more{
+    @include font-size(14,18);
+    @include letter-spacing(0);
+    color: $color-red;
+    text-align: center;
+    display: inline-block;
+    font-family: $ff-main-medium;
+    .icon{
+      @include font-size(12,14);
+      display: inline-block;
+      transform: translateX(5px);
+      transition: all 0.3s ease;
+    }
+
+    &:hover{
+      .icon{
+        transform: translateX(10px);
+      }
+    }
+  }
+  &--more-small{
+    @include font-size(21,14);
+    @include letter-spacing(0);
+    color: $color-red;
+    font-family: $ff-main-medium;
+    .icon{
+      @include font-size(12,14);
+      display: inline-block;
+      transform: translateX(5px);
+      transition: all 0.3s ease;
+    }
+
+    &:hover{
+      .icon{
+        transform: translateX(10px);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// ----- Wrappers
+.wrapper{
+  &__main {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      max-width: #{$site-desk-design}px;
+  }
+
+  &__inner {
+      width: 100%;
+      padding: 0 3rem; // Set design specific padding
+      margin: auto;
+      @include breakpoint(overPhone) {
+          padding: 0 6rem; // Set design specific padding
+      }
+  }
+
+}

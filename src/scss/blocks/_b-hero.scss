@@ -1,0 +1,92 @@
+.b-hero{
+  padding-top: 3.7rem;
+  width: 100%;
+  position: relative;
+  @include breakpoint(overPhone){
+      padding-top: 4.7rem;
+  }
+  &__slider{
+    &__dots{
+
+    }
+
+    &__controls{
+      width: 100%;
+      position: absolute;
+      top: 43.9rem;
+      padding: 0 6rem;
+      @include font-size(30,28);
+      justify-content: space-between;
+      color: $color-white;
+      @include breakpoint(overPhone){
+        display: flex;
+      }
+      & .l{
+        transform: rotate(180deg);
+      }
+      & .r{
+
+      }
+      & span{
+        cursor: pointer;
+        &:hover{
+          &:before{
+            color: $color-red;
+          }
+        }
+      }
+    }
+  }
+
+  &__slide{
+    &__content{
+      position: absolute;
+      left: 2.7rem;
+      top: 32.4rem;
+      color: $color-white;
+      max-width: 29.5rem;
+      @include breakpoint(overPhone){
+          left: 11.7rem;
+          top: 27.4rem;
+          max-width: 50.5rem;
+      }
+      & .label{
+        background: $color-red;
+        padding: 0 2rem;
+        margin-bottom: 3.5rem;
+        text-transform: uppercase;
+        @include font-size(14,15);
+        @include line-height(22, 26);
+        @include letter-spacing(100);
+        @include breakpoint(overPhone){
+          display: inline-block;
+          padding: 0 1.5rem;
+          margin-left: 0.5rem;
+          margin-bottom: 3.5rem;
+        }
+      }
+      & .title{
+        @include font-size(33,57);
+        @include letter-spacing(-20);
+        font-family: $ff-main-medium;
+        margin-bottom: 1.8rem;
+        text-shadow: 0 2px 2px rgba(0,0,0,0.4);
+        @include breakpoint(overPhone){
+          margin-bottom: 2.6rem;
+        }
+      }
+      & .text{
+        @include font-size(14,18);
+        @include line-height(22, 28);
+        margin-bottom: 2.8rem;
+        @include breakpoint(overPhone){
+          margin-bottom: 4rem;
+        }
+
+      }
+      & .c-btn{
+
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.b-one-place{
+  text-align: center;
+  @include breakpoint(overPhone){
+    text-align: center;
+  }
+
+  &__inner{
+  }
+
+  &__img{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5.5rem;
+    @include breakpoint(overPhone){
+      margin: 0 auto;
+      margin-bottom: 6rem;
+      width: 92%;
+    }
+  }
+
+  &__intro{
+    text-align: left;
+    margin-bottom: 4.8rem;
+    @include breakpoint(overPhone){
+      text-align: center;
+      margin-bottom: 7rem;
+    }
+
+    & .title{
+      @include font-size(25,32);
+      @include letter-spacing(0);
+      color:$color-black-mid;
+      margin-bottom: 1.3rem;
+      @include breakpoint(overPhone){
+        margin-bottom: 1.9rem;
+      }
+    }
+    & .description{
+      @include font-size(14,18);
+      @include line-height(22.5, 28);
+      color:$color-gray-2;
+      padding: 0;
+      @include breakpoint(overPhone){
+        padding: 0 27.3rem;
+      }
+    }
+  }
+
+  &__content{
+    text-align: left;
+    border-bottom:4px solid $color-gray-mid;
+    padding: 0;
+    padding-bottom: 3.9rem;
+    @include breakpoint(overPhone){
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      align-items: baseline;
+      padding: 0 5.9rem;
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  &__mo{
+    text-align: left;
+    margin-bottom: 5.8rem;
+    @include breakpoint(overPhone){
+      margin-bottom: 0rem;
+      width: 25%;
+    }
+    & .icon{
+      &-lizing{
+        @include font-size(80,80);
+      }
+      &-osiguranje{
+        @include font-size(86,86);
+      }
+      &-reg{
+        @include font-size(60,60);
+      }
+    }
+    & .mo-title{
+      margin-top: 3rem;
+      color:$color-black;
+      @include font-size(22,32);
+      @include letter-spacing(0);
+      @include breakpoint(overPhone){
+        margin-top: 4rem;
+      }
+    }
+    & .mo-description{
+      color:$color-gray-2;
+      @include font-size(14,14);
+      @include line-height(21, 21);
+      @include letter-spacing(0);
+      margin-top:1.9rem;
+      @include breakpoint(overPhone){
+        margin-top:1.9rem;
+      }
+    }
+    &.no-margin{
+      margin-bottom: 0;
+    }
+  }
+  & .c-btn--more{
+    margin-top: 2.9rem;
+    @include breakpoint(overPhone){
+      margin-top:3.2rem;
+    }
+  }
+}

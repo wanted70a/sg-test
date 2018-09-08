@@ -1,0 +1,107 @@
+.b-stats{
+  padding-top: 4.4rem;
+  text-align: center;
+  padding-bottom: 6.2rem;
+  @include breakpoint(overPhone){
+    padding-top:14.4rem;
+    padding-bottom: 14.4rem;
+  }
+
+  &__intro{
+    margin-bottom: 4.7rem;
+    @include breakpoint(overPhone){
+      margin-bottom: 4.7rem;
+    }
+
+    &__title{
+      @include font-size(25,32);
+      @include letter-spacing(0);
+      color:$color-black-mid;
+      margin-bottom: 1.7rem;
+      @include breakpoint(overPhone){
+        margin-bottom: 1.9rem;
+      }
+    }
+    &__text{
+      @include font-size(14,18);
+      @include line-height(22.5, 28);
+      color:$color-gray-2;
+      padding: 0;
+      @include breakpoint(overPhone){
+        padding: 0 27.3rem;
+      }
+    }
+  }
+
+  &__slider{
+    @include breakpoint(overPhone){
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+    }
+
+    &__wrapper{
+      padding: 0 3.3rem;
+      padding-bottom: 8.8rem;
+      border-bottom:4px solid $color-gray-mid;
+      @include breakpoint(overPhone){
+        padding: 0 3.3rem;
+        padding-bottom: 3.7rem;
+      }
+    }
+  }
+
+  &__slide{
+    @include breakpoint(overPhone){
+      width: 25%;
+    }
+    & .title{
+      color: $color-red;
+      font-family: $ff-main-thin;
+      margin-bottom: 1.6rem;
+      @include breakpoint(overPhone){
+        margin-bottom: 1.9rem;
+      }
+      & .numbers{
+        display: inline-block;
+        @include font-size(80,93);
+      }
+      & .text{
+        display: inline-block;
+        @include font-size(40,60);
+        margin-left: 2.7rem;
+        @include breakpoint(overPhone){
+          width: 25%;
+          margin-left: 2.7rem;
+        }
+      }
+      & .subtitle{
+        display: block;
+        color: $color-gray-title;
+        font-family: $ff-main-bold;
+        @include font-size(14,14);
+        @include letter-spacing(200);
+        text-transform: uppercase;
+        margin-top: 2.4rem;
+        line-height: 2.93rem;
+        @include breakpoint(overPhone){
+          margin-top: 3rem;
+          line-height: auto;
+        }
+      }
+    }
+    & .description{
+      color: $color-gray-txt;
+      @include font-size(14,14);
+      @include line-height(21, 21);
+      letter-spacing: 0;
+    }
+  }
+
+  & .c-btn--more{
+    margin-top:3rem;
+    @include breakpoint(overPhone){
+      margin-top: 3.4rem;
+    }
+  }
+}
