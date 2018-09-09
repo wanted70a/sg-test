@@ -1,8 +1,7 @@
-//requrie npm modules
-var test =  require('./modules/moduleTest.js');
-//for local modules
-setTimeout(()=>{
-    console.log('es6 - enabled!');
-}, 3000)
+//requrie modules and store them in vars
+var heroSlider =  require('./modules/sliders/hero-slider.js');
+
+
+//cal modules
 window.app = {}
-test();
+heroSlider();

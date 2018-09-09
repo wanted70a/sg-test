@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     babel = require('gulp-babel'),
     rename = require('gulp-rename'),
-    browserify = require('gulp-browserify');
+    browserify = require('gulp-browserify'),
+    autoprefixer = require('gulp-autoprefixer');
 
 //paths
 var sassPath = './src/scss/main.scss';
@@ -43,6 +44,10 @@ gulp.task('styles', function(){
     .pipe( plumber() )
     .pipe( sass({ outputStyle: 'compressed' })
            .on( 'error', sass.logError ) )
+    .pipe(autoprefixer({
+        browsers: ['last 5 versions'],
+        cascade: false
+    }))
     .pipe(rename('main-min.css'))
     .pipe( gulp.dest( sassExport ) )
     .pipe(browserSync.stream())
