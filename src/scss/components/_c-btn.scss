@@ -55,7 +55,9 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    display: none;
     @include breakpoint(overPhone){
+      display: block;
       bottom: 7.7rem;
       width: 4.8rem;
       height: 4.8rem;

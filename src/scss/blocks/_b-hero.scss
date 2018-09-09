@@ -5,10 +5,41 @@
   @include breakpoint(overPhone){
       padding-top: 4.7rem;
   }
-  &__slider{
-    &__dots{
-
+  .slick-dots {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    margin-top: 2.5rem;
+    position: absolute;
+    right: 4rem;
+    bottom: 3.5rem;
+    @include breakpoint(overPhone){
+      right: 36.7rem;
+      bottom: 16.4rem;
     }
+
+    li {
+      margin: 0 0.7rem;
+      display: inline-block;
+    }
+
+    button {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background-color: $color-gray-mid;
+      text-indent: -9999px;
+    }
+    li.slick-active button {
+      background-color: $color-red;
+    }
+  }
+
+  &__slider{
 
     &__controls{
       width: 100%;
@@ -56,12 +87,12 @@
     &__content{
       position: absolute;
       left: 2.7rem;
-      top: 32.4rem;
+      top: 28.6rem;
       color: $color-white;
       max-width: 29.5rem;
       @include breakpoint(overPhone){
           left: 11.7rem;
-          top: 27.4rem;
+          top: 22.6rem;
           max-width: 50.5rem;
       }
       & .label{

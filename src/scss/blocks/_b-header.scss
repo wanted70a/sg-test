@@ -164,9 +164,8 @@
       color: $color-white;
       background-image: linear-gradient($color-black, #4c4c4c);
       height: 66.4rem;
-      &.open{
-        display: flex;
-      }
+      z-index: 5;
+
       &__soc{
         border-bottom: 1px solid #616161;
         line-height:5.5rem;
