@@ -23,7 +23,7 @@
     padding-left: 1.6rem;
     @include breakpoint(overPhone){
         height: 4.7rem;
-        padding-left: 6rem;
+        padding-left: 3rem;
         padding-right: 3rem;
     }
 
@@ -114,6 +114,7 @@
   }
 
   &__nav-desk{
+      transition: all 0.35s ease;
       @include breakpoint(overPhone){
         padding-top: 3.2rem;
         display: flex;
@@ -147,6 +148,13 @@
         background: $color-white;
         padding-top: 3rem;
         padding-bottom: 3rem;
+        & .b-header__nav-desk__link{
+          color: $color-gray-title;
+        }
+        & .c-btn--animation{
+          background: $color-red;
+          color: $color-white;
+        }
       }
   }
   &__nav-mob{
