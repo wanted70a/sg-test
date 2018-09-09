@@ -1,8 +1,8 @@
 //requrie modules and store them in vars
-var heroSlider =  require('./modules/sliders/hero-slider.js');
-var statsSlider =  require('./modules/sliders/stats-slider.js');
-var localJS =  require('./modules/local-js.js');
-
+const heroSlider =  require('./modules/sliders/hero-slider.js');
+const statsSlider =  require('./modules/sliders/stats-slider.js');
+const localJS =  require('./modules/local-js.js');
+const anim    =  require('./modules/animations.js');
 
 //cal modules
 window.app = {}
@@ -11,4 +11,5 @@ window.addEventListener("load", function(event) {
   heroSlider();
   statsSlider();
   localJS();
+  anim();
  });
