@@ -1,0 +1,165 @@
+.b-footer{
+font-family: $ff-main-medium;
+padding-top: 6.9rem;
+@include breakpoint(overPhone){
+  padding-top: 8rem;
+}
+&__inner{
+  padding: 0 1.5rem;
+  border-bottom: 1px solid $color-gray-mid;
+  @include breakpoint(overPhone){
+    padding: 0 6rem;
+  }
+}
+&__nav{
+  padding-bottom: 4rem;
+  @include breakpoint(overPhone){
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    padding-bottom: 6.3rem;
+  }
+  &__item{
+    width: 100%;
+    padding: 2.2rem 2rem;
+    border-top: 1px solid $color-gray-mid;
+    @include breakpoint(overPhone){
+      border-top: 0;
+      padding: 0;
+      width: 18.8%;
+      border-top: 0;
+    }
+    &.last{
+      border-bottom: 1px solid $color-gray-mid;
+      @include breakpoint(overPhone){
+        border-bottom: 0;
+      }
+    }
+    &:nth-child(2){
+      @include breakpoint(overPhone){
+        width: 18.2%;
+      }
+    }
+
+    &:nth-child(3){
+      @include breakpoint(overPhone){
+        width: 17.4%;
+      }
+    }
+    &:nth-child(4){
+      @include breakpoint(overPhone){
+        width: 18.4%;
+      }
+    }
+
+    &__title{
+      margin-bottom: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      @include breakpoint(overPhone){
+        margin-bottom: 4.4rem;
+        display: block;
+      }
+      & .text{
+        @include font-size(13,13);
+        @include letter-spacing(100);
+        @include line-height(18, 18);
+        color:$color-gray-title;
+        text-transform: uppercase;
+      }
+
+      & .icon{
+        display: inline-block;
+        &:before{
+          transition: all 0.35s ease;
+          transform: rotate(90deg);
+        }
+        @include breakpoint(overPhone){
+          display: none;
+        }
+
+        &.open{
+          &:before{
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    &__links{
+      display: none;
+      @include breakpoint(overPhone){
+        display: block;
+        margin-top: 2.5rem;
+      }
+    }
+
+    &__link{
+      @include font-size(14,14);
+      @include letter-spacing(60);
+      @include line-height(45, 45);
+      color:$color-gray-txt;
+      //margin-bottom: 1.6rem;
+      display: block;
+      @include breakpoint(overPhone){
+
+      }
+      }
+    }
+  }
+  &__extra{
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    @include breakpoint(overPhone){
+      padding-bottom: 7.2rem;
+      padding-left: 0;
+    }
+    &__title{
+      @include font-size(13,13);
+      @include letter-spacing(100);
+      @include line-height(18, 18);
+      text-transform: uppercase;
+      color:$color-gray-title;
+      margin-bottom: 2rem;
+      display: none;
+      @include breakpoint(overPhone){
+        margin-bottom: 2rem;
+        display: block;
+      }
+    }
+    & .c-btn--more-small{
+      @include font-size(13,13);
+    }
+  }
+
+  &__copy{
+    padding: 4.8rem 3.1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    @include breakpoint(overPhone){
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      padding: 2rem 6rem;
+    }
+
+    &__item{
+      @include font-size(10,10);
+      @include letter-spacing(100);
+      @include line-height(18, 18);
+      text-transform: uppercase;
+      color:$color-gray-txt;
+      margin-right: 1.8rem;
+      display: block;
+      margin-bottom: 2.1rem;
+      @include breakpoint(overPhone){
+        margin-bottom: 0;
+        display: inline-block;
+        margin-right: 1.8rem;
+      }
+      &.last{
+        margin-right: 0;
+      }
+    }
+  }
+}
